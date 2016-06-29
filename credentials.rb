@@ -1,6 +1,6 @@
 
 
-class RLCredentials
+module RLCredentials
 
 	def intialize
 	  puts "RLCredentials init"
@@ -8,8 +8,8 @@ class RLCredentials
 
 
 	def LoadBalancer
-      print "loading credentials\n"
-      creds_file = File.open('apicreds.json', "rb")
+      print "loading netscaler api credentials\n"
+      creds_file = File.open('netscaler_apicreds.json', "rb")
       content = creds_file.read
       creds_hash = JSON.parse(content)
       print "username: ", creds_hash['login']['username'], "\n"
